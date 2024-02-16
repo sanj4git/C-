@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+
+int fib(int num){
+
+   int n1 = 0;
+   int n2 = 1;
+
+   for(int i = 1; i <= num; i ++){
+
+    cout<<n1<<endl;
+    int nex_num = n1 + n2;
+    n1 = n2;
+    n2 = nex_num;
+   }
+
+
+}
+
+
+int main(){
+
+    fib(10);
+
+
+}
