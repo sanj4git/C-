@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+bool check(int a, int b, int c){
+
+    int x = max(a, max(b, c));
+    int y, z;
+
+    if(a == x){
+        y = b;
+        z = c;
+    }
+
+    else if(b == x){
+
+        y = a;
+        z = c;
+    }
+
+    else{
+        y = a;
+        z = b;
+    }
+
+
+    if(x*x == y*y + z*z){
+        return true;
+    }
+
+    else{
+        return false;
+    }
+
+
+}
+
+
+int main(){
+
+    cout<<check(3,4,8);
+
+
+
+}
