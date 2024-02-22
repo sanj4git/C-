@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int binarysearch(int arr[], int n, int key){
+
+    int lindex = 0;
+    int rindex = n - 1;
+
+    while (lindex <= rindex){
+
+        int midex = (lindex + rindex) / 2;
+        int midnum = arr[midex];
+
+        if(midnum == key){
+            return midex;
+
+        }
+
+        else if(midnum < key){
+            lindex = midex + 1;
+        }
+
+        else{
+            rindex = midex - 1;
+        }
+    }
+
+}
+
+
+int main(){
+
+    int arr[7] = {8, 10, 12, 21, 27, 34, 42};
+    int n = 34;
+
+    cout<<binarysearch(arr, 8, n);
+
+
+
+}
